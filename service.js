@@ -73,6 +73,6 @@ module.exports = (app) => {
   // Create endpoint for bot webhook channel configurtion (Outgoing URI)
   app.post('/bot/message', webhook.receiver());
   // Create endpoint for telegram webhook
-  app.post('/telegramBot', (req, res) => {bot.processUpdate(req.body); res.sendStatus(200); });
+  app.post('/bot/telegram', (req, res) => {bot.processUpdate(req.body); res.sendStatus(200); });
 
 }
