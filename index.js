@@ -1,6 +1,5 @@
 const express = require('express');
 const service = require('./service');
-//const telegram = require('./telegram');
 const pkg = require('./package.json');
 
 const logger = console;
