@@ -29,7 +29,7 @@ module.exports = (app) => {
   webhook
     .on(WebhookEvent.MESSAGE_RECEIVED, message => {
       logger.info('Message from bot:', message);
-      // TODO: implement send to client...
+      // send to client...
       var cards = [];
       var keyboard = [];
       if ( Array.isArray(message.messagePayload.actions) ) {
