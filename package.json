@@ -1,7 +1,7 @@
 {
-  "name": "oracle-bot-webhook",
+  "name": "oracle-bot-telegram",
   "version": "1.0.0",
-  "description": "Getting started app with Oracle Bot Webhook channel",
+  "description": "Example app for Oracle Bot Webhook channel to Telegram",
   "main": "service.js",
   "author": "",
   "license": "",
