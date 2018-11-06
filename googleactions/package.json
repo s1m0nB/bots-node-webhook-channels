@@ -1,0 +1,13 @@
+{
+  "name": "oracle-bot-webhook",
+  "version": "1.0.0",
+  "description": "Getting started app with Oracle Bot Webhook channel",
+  "main": "service.js",
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "@oracle/bots-node-sdk": "^2.0.0",
+    "actions-on-google": "^2.4.1",
+    "express": "^4.16.4"
+  }
+}
