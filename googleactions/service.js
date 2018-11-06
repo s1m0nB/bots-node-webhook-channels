@@ -27,15 +27,16 @@ module.exports = (app) => {
     .on(WebhookEvent.MESSAGE_SENT, message => logger.info('Message to chatbot:', message))
     .on(WebhookEvent.MESSAGE_RECEIVED, message => logger.info('Message from chatbot:', message))
 
-  // setup google action intents
-  assistant.intent('SimonSays', (conv) => {
-    logger.info('Intent SimonSays', conv.query);
+  // setup google action default intents
+  assistant.intent('Default Fallback Intent', (conv) => {
+    logger.info('Got query : ', conv.query);
     // async must have promise in here
     const promise = new Promise(function (resolve, reject) {
       //send message
+    // TODO get userInfo
       const MessageModel = webhook.MessageModel();
       const message = {
-        userId: 'Simon',
+        userId: 'anonymous',
         messagePayload: MessageModel.textConversationMessage(conv.query)
       };
       webhook.send(message);
@@ -45,7 +46,7 @@ module.exports = (app) => {
       });
     })
       .then(function (result) {
-        // add multiple response types, this is only text
+        // TODO add multiple response types, this is only text
           conv.ask(result.messagePayload.text);
         })
     // return Promise
